@@ -1,4 +1,7 @@
 SwiftWeather
 ============
 
-Weather app in Swift using Forecast.io API
+Weather app in Swift using the Forecast.io API.
+
+## License
+[MIT License](LICENSE)
