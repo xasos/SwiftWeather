@@ -16,15 +16,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
        
-            let baseURL = NSURL(string: "https://api.forecast.io/forecast/\(API_KEY)/")
-            let forecastURL = NSURL(string: "37.8267,-122.423", relativeToURL:baseURL)
+        let baseURL = NSURL(string: "https://api.forecast.io/forecast/\(API_KEY)/")
+        let forecastURL = NSURL(string: "37.8267,-122.423", relativeToURL:baseURL)
+        
+        let sharedSession = NSURLSession.sharedSession()
+        let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithURL(forecastURL!, completionHandler: { (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
+            println(response)
+        })
+        downloadTask.resume()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-
