@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  SwiftWeather
 //
-//  Created by Niraj  on 11/28/14.
+//  Created by Niraj Pant on 11/28/14.
 //  Copyright (c) 2014 Niraj Pant. All rights reserved.
 //
 
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
                 let weatherDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as NSDictionary
                 
                 let currentWeather = Current(weatherDictionary: weatherDictionary)
-                println(currentWeather.temperature)
+                println(currentWeather.currentTime!)
             }
             
         })
