@@ -78,6 +78,9 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="GXH-5K-obA">
                                 <rect key="frame" x="151" y="40" width="20" height="20"/>
                             </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="degree" translatesAutoresizingMaskIntoConstraints="NO" id="rSc-7P-hdx">
+                                <rect key="frame" x="268" y="206" width="36" height="36"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcatraz Island, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8c-Vq-zdS">
                                 <rect key="frame" x="103" y="109" width="179" height="26"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
@@ -87,6 +90,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.29019607843137257" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="fm2-JX-SQ6" firstAttribute="top" secondItem="rSc-7P-hdx" secondAttribute="bottom" constant="-44" id="4DW-Xg-DOA"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5nB-xH-nw4" secondAttribute="bottom" constant="177" id="CTv-B8-ZLf"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="tRh-6n-I5n" secondAttribute="bottom" constant="90" id="ECz-V2-KJf"/>
                             <constraint firstAttribute="centerX" secondItem="fm2-JX-SQ6" secondAttribute="centerX" constant="5.5" id="FUw-nQ-n4c"/>
@@ -103,6 +107,7 @@
                             <constraint firstItem="gzR-v8-Uih" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="72" id="ccN-IQ-nCQ"/>
                             <constraint firstAttribute="centerY" secondItem="fm2-JX-SQ6" secondAttribute="centerY" id="g0b-JX-68H"/>
                             <constraint firstItem="P8c-Vq-zdS" firstAttribute="top" secondItem="5vA-UE-fND" secondAttribute="bottom" constant="38" id="iyj-ci-tus"/>
+                            <constraint firstItem="rSc-7P-hdx" firstAttribute="leading" secondItem="fm2-JX-SQ6" secondAttribute="trailing" constant="-11.5" id="kaD-SU-mQe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XZ3-xD-3fi" secondAttribute="trailing" constant="40" id="mba-qe-GIh"/>
                             <constraint firstItem="ClT-AT-zZ7" firstAttribute="top" secondItem="5nB-xH-nw4" secondAttribute="bottom" constant="10" id="nKe-qD-Alh"/>
                             <constraint firstAttribute="centerX" secondItem="tRh-6n-I5n" secondAttribute="centerX" constant="-0.5" id="oGH-Pv-CyI"/>
@@ -129,6 +134,7 @@
     </scenes>
     <resources>
         <image name="cloudy-night" width="46" height="43"/>
+        <image name="degree" width="36" height="36"/>
         <image name="refresh" width="43" height="43"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
