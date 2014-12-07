@@ -66,6 +66,18 @@
                                     <constraint firstAttribute="width" constant="60" id="Jcf-rR-itU"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vA-UE-fND">
+                                <rect key="frame" x="140" y="28" width="43" height="43"/>
+                                <state key="normal" image="refresh">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="refresh" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5we-KT-yFc"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="GXH-5K-obA">
+                                <rect key="frame" x="151" y="40" width="20" height="20"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcatraz Island, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8c-Vq-zdS">
                                 <rect key="frame" x="103" y="109" width="179" height="26"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
@@ -80,13 +92,17 @@
                             <constraint firstAttribute="centerX" secondItem="fm2-JX-SQ6" secondAttribute="centerX" constant="5.5" id="FUw-nQ-n4c"/>
                             <constraint firstAttribute="centerX" secondItem="Ryp-fA-PgD" secondAttribute="centerX" constant="-0.5" id="HfB-4m-3wE"/>
                             <constraint firstItem="P8c-Vq-zdS" firstAttribute="leading" secondItem="gzR-v8-Uih" secondAttribute="trailing" constant="5" id="JcO-J8-Zwu"/>
+                            <constraint firstItem="5vA-UE-fND" firstAttribute="centerX" secondItem="GXH-5K-obA" secondAttribute="centerX" constant="0.5" id="KbM-Lg-x24"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rnB-i8-Lpf" secondAttribute="trailing" constant="36" id="NeZ-bP-xQU"/>
                             <constraint firstItem="5nB-xH-nw4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="42" id="O26-p1-zi2"/>
+                            <constraint firstAttribute="centerX" secondItem="5vA-UE-fND" secondAttribute="centerX" constant="-1.5" id="SLU-1y-4kw"/>
                             <constraint firstItem="ClT-AT-zZ7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="47" id="Wy4-23-g9s"/>
                             <constraint firstItem="rnB-i8-Lpf" firstAttribute="top" secondItem="XZ3-xD-3fi" secondAttribute="bottom" constant="8" id="bul-oc-9ym"/>
+                            <constraint firstItem="5vA-UE-fND" firstAttribute="centerY" secondItem="GXH-5K-obA" secondAttribute="centerY" constant="-0.5" id="cQi-zI-QU9"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XZ3-xD-3fi" secondAttribute="bottom" constant="177" id="caU-vY-c6B"/>
                             <constraint firstItem="gzR-v8-Uih" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="72" id="ccN-IQ-nCQ"/>
                             <constraint firstAttribute="centerY" secondItem="fm2-JX-SQ6" secondAttribute="centerY" id="g0b-JX-68H"/>
+                            <constraint firstItem="P8c-Vq-zdS" firstAttribute="top" secondItem="5vA-UE-fND" secondAttribute="bottom" constant="38" id="iyj-ci-tus"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XZ3-xD-3fi" secondAttribute="trailing" constant="40" id="mba-qe-GIh"/>
                             <constraint firstItem="ClT-AT-zZ7" firstAttribute="top" secondItem="5nB-xH-nw4" secondAttribute="bottom" constant="10" id="nKe-qD-Alh"/>
                             <constraint firstAttribute="centerX" secondItem="tRh-6n-I5n" secondAttribute="centerX" constant="-0.5" id="oGH-Pv-CyI"/>
@@ -100,6 +116,8 @@
                         <outlet property="humidityLabel" destination="ClT-AT-zZ7" id="12C-jj-d0s"/>
                         <outlet property="iconView" destination="gzR-v8-Uih" id="5t5-hs-YXZ"/>
                         <outlet property="precipitationLabel" destination="rnB-i8-Lpf" id="rtU-1k-YBV"/>
+                        <outlet property="refreshActivityIndicator" destination="GXH-5K-obA" id="SWj-YN-fKj"/>
+                        <outlet property="refreshButton" destination="5vA-UE-fND" id="JmD-ru-4XU"/>
                         <outlet property="summaryLabel" destination="tRh-6n-I5n" id="Apv-Vf-1g0"/>
                         <outlet property="temperatureLabel" destination="fm2-JX-SQ6" id="Ed7-At-yx3"/>
                     </connections>
@@ -111,6 +129,7 @@
     </scenes>
     <resources>
         <image name="cloudy-night" width="46" height="43"/>
+        <image name="refresh" width="43" height="43"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
