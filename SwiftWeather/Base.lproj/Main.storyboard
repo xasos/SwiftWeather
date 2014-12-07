@@ -59,8 +59,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy-night" translatesAutoresizingMaskIntoConstraints="NO" id="gzR-v8-Uih">
+                                <rect key="frame" x="38" y="92" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="BDW-tI-HiX"/>
+                                    <constraint firstAttribute="width" constant="60" id="Jcf-rR-itU"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcatraz Island, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8c-Vq-zdS">
-                                <rect key="frame" x="71" y="94" width="179" height="26"/>
+                                <rect key="frame" x="103" y="109" width="179" height="26"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -68,30 +75,43 @@
                         </subviews>
                         <color key="backgroundColor" red="0.29019607843137257" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="P8c-Vq-zdS" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="74" id="73O-zO-M0i"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5nB-xH-nw4" secondAttribute="bottom" constant="177" id="CTv-B8-ZLf"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="tRh-6n-I5n" secondAttribute="bottom" constant="90" id="ECz-V2-KJf"/>
                             <constraint firstAttribute="centerX" secondItem="fm2-JX-SQ6" secondAttribute="centerX" constant="5.5" id="FUw-nQ-n4c"/>
                             <constraint firstAttribute="centerX" secondItem="Ryp-fA-PgD" secondAttribute="centerX" constant="-0.5" id="HfB-4m-3wE"/>
+                            <constraint firstItem="P8c-Vq-zdS" firstAttribute="leading" secondItem="gzR-v8-Uih" secondAttribute="trailing" constant="5" id="JcO-J8-Zwu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rnB-i8-Lpf" secondAttribute="trailing" constant="36" id="NeZ-bP-xQU"/>
                             <constraint firstItem="5nB-xH-nw4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="42" id="O26-p1-zi2"/>
-                            <constraint firstAttribute="centerX" secondItem="P8c-Vq-zdS" secondAttribute="centerX" constant="-0.5" id="WUH-d8-G1R"/>
                             <constraint firstItem="ClT-AT-zZ7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="47" id="Wy4-23-g9s"/>
                             <constraint firstItem="rnB-i8-Lpf" firstAttribute="top" secondItem="XZ3-xD-3fi" secondAttribute="bottom" constant="8" id="bul-oc-9ym"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XZ3-xD-3fi" secondAttribute="bottom" constant="177" id="caU-vY-c6B"/>
+                            <constraint firstItem="gzR-v8-Uih" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="72" id="ccN-IQ-nCQ"/>
                             <constraint firstAttribute="centerY" secondItem="fm2-JX-SQ6" secondAttribute="centerY" id="g0b-JX-68H"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XZ3-xD-3fi" secondAttribute="trailing" constant="40" id="mba-qe-GIh"/>
                             <constraint firstItem="ClT-AT-zZ7" firstAttribute="top" secondItem="5nB-xH-nw4" secondAttribute="bottom" constant="10" id="nKe-qD-Alh"/>
                             <constraint firstAttribute="centerX" secondItem="tRh-6n-I5n" secondAttribute="centerX" constant="-0.5" id="oGH-Pv-CyI"/>
                             <constraint firstItem="fm2-JX-SQ6" firstAttribute="top" secondItem="Ryp-fA-PgD" secondAttribute="bottom" constant="-17" id="rek-1n-VZZ"/>
+                            <constraint firstAttribute="centerX" secondItem="P8c-Vq-zdS" secondAttribute="centerX" constant="-32.5" id="t2X-SX-dXo"/>
+                            <constraint firstItem="P8c-Vq-zdS" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="89" id="w4s-Wv-SR1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentTimeLabel" destination="Ryp-fA-PgD" id="okC-I4-NZa"/>
+                        <outlet property="humidityLabel" destination="ClT-AT-zZ7" id="12C-jj-d0s"/>
+                        <outlet property="iconView" destination="gzR-v8-Uih" id="5t5-hs-YXZ"/>
+                        <outlet property="precipitationLabel" destination="rnB-i8-Lpf" id="rtU-1k-YBV"/>
+                        <outlet property="summaryLabel" destination="tRh-6n-I5n" id="Apv-Vf-1g0"/>
+                        <outlet property="temperatureLabel" destination="fm2-JX-SQ6" id="Ed7-At-yx3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="381" y="316"/>
+            <point key="canvasLocation" x="366" y="320"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cloudy-night" width="46" height="43"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
